@@ -5,7 +5,7 @@
   </div>
 </template>
 <script>
-import Tabar from "./views/tabar";
+import Tabar from "./components/tabar";
 export default {
   name:'app',
   data() {

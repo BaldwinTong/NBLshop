@@ -3,8 +3,15 @@
     <div class="seach">
       <img src="../assets/icon_search@2x.png" alt="放大镜" />
     </div>
+    <div class="block">
+      <el-carousel trigger="click" height="138px" arrow="never">
+        <el-carousel-item v-for="item in 4" :key="item">
+          <h3 class="small">{{ item }}</h3>
+        </el-carousel-item>
+      </el-carousel>
+    </div>
     
-    <div class="banner">
+    <div class="">
       
     </div>
   </div>
@@ -12,7 +19,10 @@
 
 <script>
 export default {
-  components: {},
+  data() {
+    return {};
+  },
+  methods: {},
 };
 </script>
 
@@ -31,10 +41,36 @@ export default {
   border-radius: 16px;
 }
 
-.seach img{
+.seach img {
   width: 24px;
   height: 24px;
   margin-top: 6px;
   margin-left: 16px;
+}
+
+/**
+  轮播
+ */
+.block {
+  margin-top: 16px;
+}
+
+.el-carousel {
+  border-radius: 8px;
+}
+.el-carousel__item h3 {
+  color: #475669;
+  font-size: 14px;
+  opacity: 0.75;
+  line-height: 150px;
+  margin: 0;
+}
+
+.el-carousel__item:nth-child(2n) {
+  background-color: #99a9bf;
+}
+
+.el-carousel__item:nth-child(2n + 1) {
+  background-color: #d3dce6;
 }
 </style>

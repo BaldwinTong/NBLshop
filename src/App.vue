@@ -7,7 +7,6 @@
 <script>
 import Tabar from "./components/tabar";
 export default {
-  name:'app',
   data() {
     return {};
   },

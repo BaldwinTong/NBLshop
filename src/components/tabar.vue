@@ -32,6 +32,13 @@ export default {
           electIcon: require("../assets/icon_my_color.png"),
           path:'/mine'
         },
+        {
+          id:3,
+          title: "关于",
+          icon: require("../assets/icon_my.png"),
+          electIcon: require("../assets/icon_my_color.png"),
+          path:'/about'
+        },
       ],
     };
   },

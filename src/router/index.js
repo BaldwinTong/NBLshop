@@ -1,13 +1,14 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-import Mine from '../views/Mine.vue'
+const Home = r => require.ensure([], () => r(require('../views/Home')), 'Home');
+const Mine = r => require.ensure([], () => r(require('../views/Mine')), 'Mine');
+import About from '../views/About.vue'
 
 Vue.use(VueRouter);
-const originalPush = VueRouter.prototype.push
-VueRouter.prototype.push = function push(location) {
-    return originalPush.call(this, location).catch(err => err)
-}
+// const originalPush = VueRouter.prototype.push
+// VueRouter.prototype.push = function push(location) {
+//     return originalPush.call(this, location).catch(err => err)
+// }
 export default new VueRouter({
     mode: 'history',
     routes: [{
@@ -19,7 +20,13 @@ export default new VueRouter({
             path: '/mine',
             name: 'Mine',
             component: Mine
-        }
+        },
+        {
+            path: '/about',
+            name: 'About',
+            component: About
+        },
+
     ],
 })
 

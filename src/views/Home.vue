@@ -3,7 +3,7 @@
     <div class="seach">
       <img src="../assets/icon_search@2x.png" alt="放大镜" />
     </div>
-    <div class="block">
+    <div class="banner">
       <el-carousel trigger="click" height="138px" arrow="never">
         <el-carousel-item v-for="item in 4" :key="item">
           <h3 class="small">{{ item }}</h3>
@@ -11,9 +11,14 @@
       </el-carousel>
     </div>
     
-    <div class="">
-      
+    <div class="iconList">
+      <img src="../assets/icon_Nearby_stores@2x.png" alt="">
+      <img src="../assets/icon_circle@2x.png" alt="">
+      <img src="../assets/icon_parents_school@2x.png" alt="">
+      <img src="../assets/icon_discount_coupon@2x.png" alt="">
     </div>
+    
+    
   </div>
 </template>
 
@@ -51,7 +56,7 @@ export default {
 /**
   轮播
  */
-.block {
+.banner {
   margin-top: 16px;
 }
 
@@ -72,5 +77,18 @@ export default {
 
 .el-carousel__item:nth-child(2n + 1) {
   background-color: #d3dce6;
+}
+
+/**菜单图标 */
+.iconList{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.iconList img{
+  width: 72px;
+  height: 72px;
 }
 </style>
